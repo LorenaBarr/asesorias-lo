@@ -1,0 +1,188 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Asesorías Lo - Creadora de Contenido">
+  <main>
+    <h1>Bienvenidos a <span class="text-gradient">Asesorías Lo</span></h1>
+    <p class="bio">
+      Soy Lore, una apasionada creadora de contenido y asesora. Mi misión es
+      ayudarte a brillar en el mundo digital.
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="#sobre-mi"
+        title="Sobre Mí"
+        body="Conoce más sobre mi trayectoria y pasión por las asesorías y creación de contenido."
+      />
+      <Card
+        href="#servicios"
+        title="Servicios"
+        body="Descubre cómo puedo ayudarte con mis asesorías personalizadas."
+      />
+      <Card
+        href="#proyectos"
+        title="Proyectos"
+        body="Explora algunos de mis trabajos más destacados."
+      />
+      <Card
+        href="#contacto"
+        title="Contacto"
+        body="¿Listo para llevar tu contenido al siguiente nivel? ¡Hablemos!"
+      />
+    </ul>
+
+    <section id="sobre-mi">
+      <h2>Sobre Mí</h2>
+      <p>
+        Soy Lore, licenciada en Ciencias Sociales, apasionada por la tecnología.
+        Esta pasión me llevó a cambiar de rumbo hacia el desarrollo web, donde
+        descubrí mi gusto por la creación de contenido digital y estrategias
+        innovadoras.
+      </p>
+    </section>
+
+    <section id="servicios">
+      <h2>Mis Servicios</h2>
+      <ul>
+        <li>
+          Creación de contenido digital: posts, pósters, banners y videos para
+          impulsar tu marca.
+        </li>
+        <li>
+          Asesoría personalizada para el desarrollo de tu marca personal o de
+          negocio.
+        </li>
+        <li>Diseño de páginas web y gestión profesional de redes sociales.</li>
+      </ul>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos Destacados</h2>
+      <ul>
+        <li>
+          Manejo de posts semanales para negocio local en Instagram y Facebook
+        </li>
+        <li>Edición de videos para programa radial y subida a YouTube</li>
+        <li>Creación de páginas web adaptadas a tus necesidades</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="social-icons">
+        <a
+          href="https://wa.me/573227712224"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-icon"
+        >
+          <i class="fab fa-whatsapp"></i> WhatsApp: +57 3227712224
+        </a>
+        <a
+          href="https://www.instagram.com/asesoriasLo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-icon"
+        >
+          <i class="fab fa-instagram"></i> Instagram: @asesoriasLo
+        </a>
+        <a
+          href="https://twitter.com/asesoriasLo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-icon"
+        >
+          <i class="fab fa-twitter"></i> Twitter: @asesoriasLo
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .contact-icon {
+    font-size: 1.5rem;
+    color: var(--neon-text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .contact-icon:hover {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px var(--neon-text-color);
+  }
+</style>
